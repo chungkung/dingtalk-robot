@@ -4,14 +4,14 @@ DINGTALK_MINI_APP_ID = ""
 DINGTALK_APP_KEY = "dingzuqxgrxfhp81nm4i"
 DINGTALK_APP_SECRET = "zj-pT_vr5-sgMXIQAuefPQYqyka_1mz4MU7vb9VopEzdSTL2TQEncq62LkAZtvif"
 DINGTALK_WEBHOOK_URL = "https://oapi.dingtalk.com/robot/send?access_token=0dfaac8157f7fd5b98c68d4c3a696e451d2700ae1d6c29d9ae6fbca8eeb1ac28"
-NATAPP_PUBLIC_URL = "http://your-app.railway.app"
+NATAPP_PUBLIC_URL = "http://8.137.51.239"
 
 # Flask服务配置
 FLASK_HOST = "0.0.0.0"
-FLASK_PORT = 8080
+FLASK_PORT = 80
 FLASK_DEBUG = False
 
-# 千问模型配置（GitHub部署时禁用）
+# 千问模型配置（阿里云部署时禁用，使用纯FAQ模式）
 QWEN_MODEL_PATH = "models/Qwen1.5-1.8B-Chat"
 QWEN_MODEL_QUANTIZED = False
 QWEN_MAX_NEW_TOKENS = 512

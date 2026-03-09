@@ -1,75 +1,33 @@
-# GCC IT管理部智能问答小助手
-# 启动指南
+# IT管理部智能助手
 
-## 环境要求
-- Python 3.8+
-- 8GB+ RAM
-- 20GB+ 硬盘空间
+钉钉FAQ机器人，一键启动！
 
-## 安装步骤
+## 快速启动
 
-### 1. 创建虚拟环境
+### Windows用户
+双击运行 `启动机器人.bat`
+
+### Mac/Linux用户
 ```bash
-python -m venv venv
+bash 启动机器人.sh
 ```
 
-### 2. 激活虚拟环境
-```bash
-# Windows
-venv\Scripts\activate
+## 启动后
 
-# Linux/Mac
-source venv/bin/activate
-```
+1. 服务自动运行在 http://localhost
+2. 确保 natapp 隧道正常运行（如果有）
+3. 在钉钉中 @IT管理部智能助手 提问
 
-### 3. 安装依赖
-```bash
-pip install -r requirements.txt
-```
+## 注意事项
 
-### 4. 下载千问模型
-请从HuggingFace下载 Qwen-1.8B-Chat 模型到 models 目录:
-https://huggingface.co/Qwen/Qwen-1.8B-Chat
+- 首次运行会自动安装依赖（约1-2分钟）
+- 保持电脑开机，机器人才能正常运行
+- 关闭命令行窗口可停止服务
 
-### 5. 配置钉钉
-1. 登录钉钉开发者平台
-2. 创建自定义机器人
-3. 获取Webhook地址
-4. 启用加签机制（可选）
+## 常见问题
 
-### 6. 运行服务
-```bash
-python src/app.py
-```
+**Q: 提示"Python未安装"**
+A: 下载安装Python：https://www.python.org/downloads/
 
-服务将在 http://localhost:8080 启动
-
-### 7. 配置开机自启（Windows）
-将 start.vbs 复制到以下目录:
-```
-C:\Users\<用户名>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
-```
-
-## API接口
-
-### 钉钉Webhook回调
-POST /dingtalk/webhook
-
-### 健康检查
-GET /health
-
-### 对话接口
-POST /api/chat
-{
-    "question": "问题内容",
-    "user_id": "用户ID"
-}
-
-### 清除上下文
-POST /api/context/clear
-{
-    "user_id": "用户ID"
-}
-
-### 重新加载知识库
-POST /api/reload
+**Q: 机器人没有响应**
+A: 检查natapp是否正常运行

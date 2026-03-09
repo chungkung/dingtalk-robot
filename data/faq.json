@@ -1,0 +1,275 @@
+[
+    {
+        "id": 1,
+        "category": "IT设备领用",
+        "question": "如何领取墨盒",
+        "answer": "墨盒申请：\n填写下列链接后，在18219 E办公区IT管理部位置找罗圣喆。\n\n墨盒打印纸申请表：https://alidocs.dingtalk.com/notable/share/form/v01yBRq1MK3yRemqdv1_dv19yqvsgs3oebp3pcjys_3zH87kQ\n\n负责人：罗圣喆",
+        "keywords": ["墨盒", "领取墨盒", "墨盒申请", "打印纸", "墨盒领取", "我想要申请一个墨盒", "我想要墨盒", "打印机没墨了", "墨盒在哪申请", "申请墨盒", "打印机没墨盒了", "换墨盒", "墨盒没了"]
+    },
+    {
+        "id": 2,
+        "category": "IT设备领用",
+        "question": "如何申请一体机或显示器",
+        "answer": "一体机/显示器领用流程：\n1. 填写一体机显示器领用申请表：https://alidocs.dingtalk.com/notable/share/form/v01r4mlQg0r0vEXqxow_6ZYRr0E_aqmVqtp\n2. 填写后会收到纸质单模板\n3. 打印纸质单模板找领导签字\n4. 签字后联系罗圣喆领取\n\n负责人：罗圣喆",
+        "keywords": ["一体机", "显示器", "领用", "申请一体机", "申请显示器"]
+    },
+    {
+        "id": 3,
+        "category": "网盘相关",
+        "question": "开网盘账号找谁",
+        "answer": "网盘账号开通：\n请联系罗文豪办理。\n\n负责人：罗文豪（休假期间找林博）\n电话：8-981-198-5837\n邮箱：luowenhao@cc7.cn",
+        "keywords": ["开网盘", "网盘账号", "开通网盘", "网盘找谁", "开网盘找谁", "网盘问题找谁"]
+    },
+    {
+        "id": 4,
+        "category": "网盘相关",
+        "question": "如何申请网盘",
+        "answer": "网盘申请流程：\n1. 走OA流程\n2. 打开7MS客户端或访问：http://10.71.16.198:8093/login/OALogin.jsp#/?_key=l4z1ve\n3. 切换到GCC项目部身份\n4. 找到IT管理部里面的【用户新增或停用申请表】申请即可\n\n注意：涉及设备材料部相关权限请选择【设材部权限申请】",
+        "keywords": ["网盘申请", "申请网盘", "GCC网盘", "OA流程"]
+    },
+    {
+        "id": 5,
+        "category": "网盘相关",
+        "question": "网盘密码忘记了",
+        "answer": "网盘密码重置：\n- 联系罗文豪重置密码\n- 罗文豪休假期间（3.11-4.11）：请联系林博重置\n\n负责人：罗文豪（休假期间找林博）\n电话：8-981-198-5837\n邮箱：luowenhao@cc7.cn",
+        "keywords": ["网盘密码", "密码忘记", "密码重置", "网盘登陆不上"]
+    },
+    {
+        "id": 6,
+        "category": "网盘相关",
+        "question": "网盘登录不上怎么办",
+        "answer": "网盘登陆不上处理：\n1. 如果是密码忘记，请联系罗文豪重置\n2. 如果是账号被锁定，请联系罗文豪处理\n\n负责人：罗文豪（休假期间找林博）\n电话：8-981-198-5837",
+        "keywords": ["网盘登陆", "网盘登录", "登陆不上", "账号锁定", "登录不上", "登不上", "网盘登不上"]
+    },
+    {
+        "id": 7,
+        "category": "网盘相关",
+        "question": "如何把网盘映射到本地",
+        "answer": "映射网盘到本地步骤：\n\n1. 进入我的电脑(此电脑)，右键点击【添加一个网络位置】\n\n2. 点击下一步至输入地址界面，输入 \\\\10.78.43.8\\质量部（对应的部门），点击下一步\n\n3. 输入网盘账号密码，点击确定。如果提示账号密码不正确，请联系IT部罗文豪\n\n4. 自定义输入名称，点击下一步\n\n5. 点击完成\n\n注意：GCC网盘地址为 \\\\10.78.43.8\\ 对应各部门共享目录",
+        "keywords": ["映射网盘", "网络位置", "Windows资源管理器", "本地映射", "把网盘映射到自己电脑上", "添加网络位置", "如何映射", "囊个把", "怎么把", "如何把"]
+    },
+    {
+        "id": 8,
+        "category": "网盘相关",
+        "question": "Windows资源管理器添加GCC网盘网络位置方法",
+        "answer": "Windows资源管理器添加GCC网盘网络位置方法：\n\n1. 进入我的电脑(此电脑)，右键点击添加一个网络位置\n\n2. 一直点击下一步至下图界面，输入 \\\\10.78.43.8\\质量部（对应的部门），点击下一步\n\n3. 输入网盘账号密码，点击确定。如果提示账号密码不正确，请联系IT部罗文豪\n\n4. 自定义输入名称，点击下一步\n\n5. 点击完成",
+        "keywords": ["Windows资源管理器", "GCC网盘", "网络位置", "添加网络位置", "映射"]
+    },
+    {
+        "id": 9,
+        "category": "网盘相关",
+        "question": "网盘地址",
+        "answer": "网盘地址：\n- GCC网盘：https://10.78.43.8:5001/#/signin\n- 合同部网盘：https://10.78.40.100:5001/#/signin",
+        "keywords": ["网盘地址", "GCC网盘", "合同部网盘", "网盘链接"]
+    },
+    {
+        "id": 10,
+        "category": "网盘相关",
+        "question": "施工队能开网盘账号吗",
+        "answer": "施工队/分包/外包人员开通网盘账号：\n需要得到分配权限所对应部门的领导授权截图，并私发具体情况至罗文豪处办理。\n\n负责人：罗文豪（休假期间找林博）",
+        "keywords": ["施工队", "分包", "外包", "网盘账号", "权限申请"]
+    },
+    {
+        "id": 11,
+        "category": "网盘相关",
+        "question": "如何增加网盘权限",
+        "answer": "网盘权限增加：\n1. 已有账号需要新增权限：联系罗文豪（休假期间找林博）\n2. 设材部权限：需走OA流程（不管有无账号）\n3. 费控/文控权限：联系罗文豪（休假期间找林博）\n\n负责人：罗文豪（休假期间找林博）",
+        "keywords": ["增加权限", "费控权限", "文控权限", "设材权限", "权限新增", "新增网盘权限"]
+    },
+    {
+        "id": 12,
+        "category": "网盘相关",
+        "question": "网盘IP地址被锁定",
+        "answer": "网盘IP地址被锁定：\n请联系罗文豪处理。\n\n负责人：罗文豪（休假期间找林博）\n电话：8-981-198-5837",
+        "keywords": ["IP锁定", "网盘锁定", "IP地址"]
+    },
+    {
+        "id": 13,
+        "category": "账号管理",
+        "question": "如何申请ASSAI账号",
+        "answer": "ASSAI账号申请流程：\n1. 填写OA（GCC项目）IT管理部 - 用户新增或停用申请表\n2. 申请时请参照附件附上ASSAI申请表\n3. 申请表模板链接：https://alidocs.dingtalk.com/i/nodes/DnRL6jAJM7xlgabGiDr1O3peWyMoPYe1\n4. 申请表文件链接：https://alidocs.dingtalk.com/i/nodes/NDoBb60VLy3qDA0QFrq1BlKkJlemrZQ3\n5. 登录时请选择 Assai IdP 登录\n\n如密码过期：请尝试点击Forgot password?后输入申请账号邮箱和ASSAI账号自行重置。有时需要更换Edge或Chrome浏览器才能成功。\n如仍不能解决请联系：叶沿廷 或 宋美衡",
+        "keywords": ["ASSAI", "ASSAI账号", "申请ASSAI"]
+    },
+    {
+        "id": 14,
+        "category": "账号管理",
+        "question": "如何申请MS365（bccipmt）账号",
+        "answer": "MS365账号申请：\n1. 填写OA（GCC项目）IT管理部 - 用户新增或停用申请表\n\n重置密码：可用申请账号的CC7邮箱发邮件到 service@pesco.energy 联系pesco同事重置，也可以联系叶沿廷或宋美衡代为联系。\n\n开通Power BI权限：请联系叶沿廷或宋美衡发送邮件给pesco同事。",
+        "keywords": ["MS365", "bccipmt", "账号申请", "Power BI", "密码重置"]
+    },
+    {
+        "id": 15,
+        "category": "账号管理",
+        "question": "如何申请SHTAB（trace air）账号",
+        "answer": "SHTAB账号申请：\n1. 填写OA（GCC项目）IT管理部 - 用户新增或停用申请表\n\n重置密码：请点击 Forgot password? 后输入申请账号邮箱，新密码会发送到邮箱里。\n\n如仍不能解决请联系：叶沿廷 或 宋美衡",
+        "keywords": ["SHTAB", "trace air", "账号申请", "密码重置"]
+    },
+    {
+        "id": 16,
+        "category": "账号管理",
+        "question": "如何申请或重置7MS账号密码",
+        "answer": "7MS账号密码：\n由人力同事录入人力管理系统后自动生成。如没有账号，请联系人力同事录入信息生成。\n7ms账号密码同时也是Inode VPN、CC7邮箱、钉钉、ERM账号密码。联系管理员重置后需要登录7ms重置初始密码同步其他系统。\n\n重置密码请联系罗文豪或叶沿廷，重置时请提供7ms账号或者工号。\n\n7MS登录不上：如果密码错误，请先多试几次密码，账号名为CC7邮箱前缀，比如 luowenhao@cc7.cn 前缀是 luowenhao，也就是CC7钉钉的用户名，密码则为之前改过的密码。如果忘记，请联系罗文豪、叶沿廷重置。\n\n作业人员无邮箱和7ms账号，如需要请联系人力同事重新录入为管理人员。",
+        "keywords": ["7MS", "7ms", "账号", "密码", "密码重置", "密码忘记", "7ms密码忘记", "7ms密码重置", "7ms登不上", "7ms登陆不上", "Inode VPN"]
+    },
+    {
+        "id": 17,
+        "category": "账号管理",
+        "question": "如何申请1C账号",
+        "answer": "1C账号申请/重置：\n请联系叶沿廷发邮件申请，请说明申请账号为 Azolo-MMS（采购）还是 1C-Warehouse（仓储）。\n\n负责人：叶沿廷\n邮箱：yeyanting@cc7.cn",
+        "keywords": ["1C", "1c账号", "账号申请", "Azolo-MMS", "1C-Warehouse", "1C账号忘记了", "1C账号忘记"]
+    },
+    {
+        "id": 18,
+        "category": "设备维修",
+        "question": "打印机坏了如何报修",
+        "answer": "打印机维修：\n如打印机损坏，请联系林博或叶沿廷登记，每个月维修工程师会来项目部两次，届时进行修理。有时需要采购零件，时间会比较长。\n目前部分打印机不在维修公司与我们的合同范围内。\n\n负责人：林博、叶沿廷",
+        "keywords": ["打印机维修", "打印机坏了", "打印机故障", "报修", "林博", "打印机修理", "打印机损坏"]
+    },
+    {
+        "id": 19,
+        "category": "IT设备领用",
+        "question": "如何领取键盘鼠标",
+        "answer": "键盘鼠标领取请联系周志鹏。\n\n负责人：周志鹏\n电话：8-911-960-6522\n邮箱：zhouzhipeng@cc7.cn",
+        "keywords": ["键盘", "鼠标", "领取", "周志鹏"]
+    },
+    {
+        "id": 20,
+        "category": "IT设备领用",
+        "question": "如何申请电脑",
+        "answer": "电脑申请请联系周志鹏，负责IT资产管理（办公IT设备出入库登记发放）。\n\n负责人：周志鹏\n电话：8-911-960-6522\n邮箱：zhouzhipeng@cc7.cn",
+        "keywords": ["电脑", "申请电脑", "周志鹏"]
+    },
+    {
+        "id": 21,
+        "category": "网络故障",
+        "question": "网络故障找谁",
+        "answer": "网络故障请联系张海彬。\n\n负责人：张海彬\n电话：8-911-150-9677\n邮箱：zhanghaibin@cc7.cn\n负责：ISP接入跟踪、网络故障处理、数据中心维护、监控系统维护、服务器管理",
+        "keywords": ["网络", "网络故障", "监控", "服务器", "张海彬"]
+    },
+    {
+        "id": 22,
+        "category": "账号管理",
+        "question": "钉钉密码忘记了",
+        "answer": "钉钉密码重置请联系叶沿廷。\n\n负责人：叶沿廷\n电话：8-981-722-6117\n邮箱：yeyanting@cc7.cn",
+        "keywords": ["钉钉", "密码重置", "叶沿廷", "钉钉登录不上", "钉钉登陆不上", "钉钉密码忘记"]
+    },
+    {
+        "id": 23,
+        "category": "网盘相关",
+        "question": "增加合同部门文件权限找谁",
+        "answer": "增加合同部门文件权限请联系罗文豪。\n\n非合同部门同事在未经领导许可的情况下不得开通相关权限。\n\n负责人：罗文豪（休假期间找林博）\n电话：8-981-198-5837\n邮箱：luowenhao@cc7.cn",
+        "keywords": ["增加合同部门文件权限", "合同部门权限", "合同部权限", "增加权限找谁", "增加合同部权限", "增加合同权限", "增加合同部文件权限", "需要增加合同部权限", "增加合同部的权限", "我要增加合同部权限", "我要增加合同部的权限"]
+    },
+    {
+        "id": 24,
+        "category": "网盘相关",
+        "question": "开通合同部门网盘",
+        "answer": "开通合同部门网盘：\n1. 已有账号：请咨询合同部对应领导是否能够授予你对应的权限\n2. 没有账号：需走OA流程申请\n\n注意：非合同部门同事在未经领导许可的情况下不得开通相关权限。",
+        "keywords": ["开通合同部门网盘", "合同部网盘", "合同部门网盘", "开通合同网盘"]
+    },
+    {
+        "id": 25,
+        "category": "账号管理",
+        "question": "新入职人员需要钉钉或7ms账号",
+        "answer": "新入职人员开通钉钉或7ms账号：请联系罗文豪或叶沿廷。",
+        "keywords": ["新入职", "钉钉账号", "7ms账号", "开通账号", "入职账号"]
+    },
+    {
+        "id": 26,
+        "category": "账号管理",
+        "question": "ERM相关问题",
+        "answer": "ERM相关问题：请联系肖翔或韩云峰。\n\nERM使用说明：https://alidocs.dingtalk.com/i/nodes/14dA3GK8gwA3lRpjcgyajAQK89ekBD76\n\nERM常见操作问题：https://alidocs.dingtalk.com/i/nodes/LeBq413JA24RBpkwcZY4MjYo8DOnGvpb",
+        "keywords": ["ERM", "ERM账号", "ERM问题", "ERM使用", "ERM怎么用", "ERM操作", "ERM数据管理系统"]
+    },
+    {
+        "id": 27,
+        "category": "网络相关",
+        "question": "CC7邮箱收不到邮件",
+        "answer": "CC7邮箱收不到邮件：请先开通inode。如果inode登录不了，请检查账号和密码是否与7MS的账号密码一致。如还不能解决请联系罗文豪、叶沿廷。",
+        "keywords": ["CC7邮箱", "邮箱收不到", "邮件收不到", "邮箱问题"]
+    },
+    {
+        "id": 28,
+        "category": "网络相关",
+        "question": "没有inode怎么办",
+        "answer": "没有inode：请先走OA流程，大数据中心里面有相关问题。如果还不行请联系朱川。",
+        "keywords": ["没有inode", "inode申请", "申请inode", "没有inode怎么办", "inode下载"]
+    },
+    {
+        "id": 29,
+        "category": "系统相关",
+        "question": "PU系统相关问题",
+        "answer": "PU系统相关问题：请联系宋美衡。",
+        "keywords": ["PU", "PU系统", "PU账号"]
+    },
+    {
+        "id": 30,
+        "category": "软件下载",
+        "question": "inode下载链接",
+        "answer": "inode下载链接：\n\n【Windows电脑】\n- Windows中文版：https://alidocs.dingtalk.com/i/nodes/DnRL6jAJM7xlgabGiKorGgylWyMoPYe1\n- Windows英文版：https://alidocs.dingtalk.com/i/nodes/nYMoO1rWx2xMkewacb1Gz0B6J47Z3je9\n- Windows历史版本：https://alidocs.dingtalk.com/i/nodes/l6Pm2Db8DajYGw24Fz0Zbv6jWxLq0Ee4\n- 安装教程：https://alidocs.dingtalk.com/i/nodes/dxXB52LJq0pEvRbnuy62kjlKVqjMp697\n\n【安卓手机】\n- 下载链接：https://alidocs.dingtalk.com/i/nodes/R4GpnMqJzl5Np7qGcKxjjgG4WKe0xjE3\n- 安装教程：https://alidocs.dingtalk.com/i/nodes/dxXB52LJq0pEvRbnuy62kjlKVqjMp697\n\n【苹果手机（iOS）】\n- 在苹果App Store搜索\"inode connect\"下载\n- 安装教程：https://alidocs.dingtalk.com/i/nodes/dxXB52LJq0pEvRbnuy62kjlKVqjMp697",
+        "keywords": ["inode下载", "下载inode", "inode安装包", "inode在哪下载", "inode链接", "windows inode", "手机 inode", "苹果 inode", "ios inode", "我需要inode", "申请inode"]
+    },
+    {
+        "id": 31,
+        "category": "软件下载",
+        "question": "7MS下载链接",
+        "answer": "7MS下载链接：\n\n【Windows电脑】\n- 32位：https://alidocs.dingtalk.com/i/nodes/PwkYGxZV3pmg70lZc49z91MNJAgozOKL\n- 64位：https://alidocs.dingtalk.com/i/nodes/mweZ92PV6zYNbPAMTrMPYb29VxEKBD6p\n\n【安卓手机】\n- 下载链接：http://10.71.16.170/images/7MSPC/7MS202602161.apk\n\n【苹果手机（iOS）】\n- 下载链接：https://testflight.apple.com/join/h1sCpJYf\n（点击链接后按要求安装TestFlight，然后再次点击该链接下载7MS）\n\n【鸿蒙系统】\n- 下载链接：https://appgallery.huawei.com/link/invite-test-wap?taskId=bffa929181cfae0c3113a4db7fc846eb&invitationCode=2E1NaMuV52i",
+        "keywords": ["7MS下载", "下载7MS", "7MS安装包", "7MS在哪下载", "7MS链接", "7ms安装", "手机7MS", "华为7MS", "鸿蒙7MS"]
+    },
+    {
+        "id": 32,
+        "category": "软件下载",
+        "question": "专属钉下载安装",
+        "answer": "专属钉安装指南：\nhttps://alidocs.dingtalk.com/i/nodes/1OQX0akWmL95danxSpxaQOlx8GlDd3mE\n\n专属钉同时支持普通账号以及专属账号的登录。\n\n注意：普通账号登陆为您的个人账号，请选择企业账号登陆，并使用公司7MS系统账号登陆。",
+        "keywords": ["专属钉", "钉钉安装", "钉钉下载", "钉钉安装包", "我需要钉钉", "钉钉在哪下载", "下载钉钉"]
+    },
+    {
+        "id": 33,
+        "category": "流程相关",
+        "question": "如何修改或退回流程",
+        "answer": "修改/退回流程：\n点击右上方三条横线，鼠标点击一下，然后看该流程是否可以撤回。\n如果不行请自行联系对应的领导退回即可。",
+        "keywords": ["修改流程", "退回流程", "撤回流程", "流程怎么退", "流程修改"]
+    },
+    {
+        "id": 34,
+        "category": "流程相关",
+        "question": "流程节点不对如何修改",
+        "answer": "流程节点修改：请联系李俊威或叶雪梅或宋美衡。",
+        "keywords": ["流程节点", "节点不对", "修改节点", "流程节点错误"]
+    },
+    {
+        "id": 35,
+        "category": "账号管理",
+        "question": "切换主副账号",
+        "answer": "切换主副账号：请联系李俊威或叶雪梅修改。",
+        "keywords": ["切换主副账号", "主副账号", "账号调换", "OA账号切换"]
+    },
+    {
+        "id": 36,
+        "category": "软件下载",
+        "question": "OA安装包下载",
+        "answer": "泛微OA（e-mobile）：\n\n【服务器地址】\nhttp://10.71.16.198:8999\n\n【安卓手机】\nhttp://emobile.weaver.com.cn/customer/EM7/produce.html\n\n【苹果手机】\nhttp://emobile.weaver.com.cn/customer/EM7/produce.html 或苹果应用市场搜索 e-mobile\n\n【华为/鸿蒙系统】\n在应用市场搜索 emobile7",
+        "keywords": ["OA安装", "OA安装包", "手机上安装OA", "OA下载", "e-mobile", "泛微OA", "华为OA", "鸿蒙OA"]
+    },
+    {
+        "id": 37,
+        "category": "软件下载",
+        "question": "腾讯会议下载",
+        "answer": "腾讯会议下载：\nhttps://meeting.tencent.com/",
+        "keywords": ["腾讯会议", "腾讯会议安装", "腾讯会议下载", "腾讯会议安装包"]
+    },
+    {
+        "id": 38,
+        "category": "软件下载",
+        "question": "亿联会议下载",
+        "answer": "亿联会议下载：\nhttps://www.ylyun.com/portal/pc/Download",
+        "keywords": ["亿联会议", "亿联会议安装", "亿联会议下载", "亿联会议安装包"]
+    },
+    {
+        "id": 39,
+        "category": "软件下载",
+        "question": "WPS下载安装",
+        "answer": "WPS下载：\n\n【个人版】\nhttps://www.wps.cn/\n\n【企业版】\nhttps://alidocs.dingtalk.com/i/nodes/OG9lyrgJPXlKNbyzfX1zeZlrJzN67Mw4\n\n【企业版激活码】\n694BF-YUDBG-EAR69-BPRGB-ATQXH\n\n公司已对企业版用户购买会员，需要激活的同事请使用以上激活码进行激活。",
+        "keywords": ["WPS", "WPS安装", "WPS下载", "WPS安装包", "WPS打不开", "WPS激活"]
+    }
+]

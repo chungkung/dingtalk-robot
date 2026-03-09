@@ -1,0 +1,200 @@
+[
+    {
+        "id": 1,
+        "name": "周志鹏",
+        "project": "G项目",
+        "responsibility": "IT资产管理（办公IT设备出入库登记发放）、用户IT相关支持、钢构厂PLM排版软件运维、会议支持、打印系统账号发放",
+        "phone": "8-911-960-6522",
+        "email": "zhouzhipeng@cc7.cn",
+        "keywords": ["IT资产", "设备", "出入库", "登记", "发放", "电脑", "显示器", "键盘", "鼠标", "网线", "耗材", "墨盒", "打印纸", "一体机", "硬件", "用户支持", "PLM", "排版", "会议", "打印系统账号", "申请电脑", "申请显示器", "需要网线", "需要键盘", "需要鼠标", "设备坏了", "电脑坏了"]
+    },
+    {
+        "id": 2,
+        "name": "叶沿廷",
+        "project": "G项目",
+        "responsibility": "7ms/钉钉账号密码重置、ASSAI/MS365/SHTAB账号创建和管理、打印系统账号管理",
+        "phone": "8-981-722-6117",
+        "email": "yeyanting@cc7.cn",
+        "keywords": ["7MS", "钉钉", "账号", "密码", "重置", "ASSAI", "MS365", "SHTAB", "Trace Air", "账号创建", "账号管理", "打印系统", "密码忘了", "账号申请", "账号问题"]
+    },
+    {
+        "id": 3,
+        "name": "曹一凡",
+        "project": "G项目",
+        "responsibility": "智慧工地建设、合同采购（打印机/一体机/耳机等）、通讯管理（电话卡/微基站）、会议支持、文印系统授权",
+        "phone": "8-911-235-3028",
+        "email": "caoyifan@cc7.cn",
+        "keywords": ["智慧工地", "采购", "打印机", "一体机", "耳机", "电话卡", "微基站", "会议", "通讯", "文印系统", "投影仪", "采购打印机", "采购一体机"]
+    },
+    {
+        "id": 4,
+        "name": "张海彬",
+        "project": "G项目",
+        "responsibility": "ISP接入跟踪、网络故障处理、数据中心维护、监控系统维护、服务器管理",
+        "phone": "8-911-150-9677",
+        "email": "zhanghaibin@cc7.cn",
+        "keywords": ["网络", "监控", "服务器", "ISP", "网络故障", "信号塔", "数据中心", "监控坏了", "网络不通", "服务器问题", "网络连不上"]
+    },
+    {
+        "id": 5,
+        "name": "罗文豪",
+        "project": "G项目",
+        "responsibility": "GCC网盘账号管理、文件搭建、权限分配、7ms/钉钉账号密码重置（协助）、ASSAI/MS365/SHTAB账号对接（协助）、办公区日常软件问题（协助）",
+        "phone": "8-981-198-5837",
+        "email": "luowenhao@cc7.cn",
+        "keywords": ["网盘", "GCC网盘", "权限", "文件搭建", "账号", "钉钉", "密码重置", "软件问题", "办公区", "网盘权限", "文件权限"]
+    },
+    {
+        "id": 6,
+        "name": "宋美衡",
+        "project": "G项目",
+        "responsibility": "IT资产费用报销、办公区软件问题支持",
+        "phone": "8-911-151-2746",
+        "email": "songmeiheng@cc7.cn",
+        "keywords": ["报销", "IT资产", "费用", "软件问题", "办公区"]
+    },
+    {
+        "id": 7,
+        "name": "李俊威",
+        "project": "G项目",
+        "responsibility": "会议支持、安全培训室维护、RAP机器人运维",
+        "phone": "8-911-012-0213",
+        "email": "lijunwei@cc7.cn",
+        "keywords": ["会议", "亿联会议", "安全培训室", "RAP机器人", "会议室", "会议设备", "视频会议"]
+    },
+    {
+        "id": 8,
+        "name": "先雨昕",
+        "project": "G项目",
+        "responsibility": "部门管理、考勤管理、通讯录维护",
+        "phone": "8-911-941-9063",
+        "email": "xianyuxin@cc7.cn",
+        "keywords": ["考勤", "考勤表", "通讯录", "部门管理", "宣贯"]
+    },
+    {
+        "id": 9,
+        "name": "李兴侠",
+        "project": "G项目",
+        "responsibility": "专业软件运维（Documentum、PCMS、AVEVA）、软件许可证管理",
+        "phone": "8-911-151-2031",
+        "email": "lixingxia@cc7.cn",
+        "keywords": ["Documentum", "PCMS", "AVEVA", "许可证", "软件", "系统运维", "文控"]
+    },
+    {
+        "id": 10,
+        "name": "肖翔",
+        "project": "G项目",
+        "responsibility": "ERM系统运维、材料管理、权限管理、服务器管理",
+        "phone": "7-981-198-4867",
+        "email": "xiaoxiang@cc7.cn",
+        "keywords": ["ERM", "材料管理", "权限", "服务器", "系统问题", "ERM系统"]
+    },
+    {
+        "id": 11,
+        "name": "崔荣华",
+        "project": "G项目",
+        "responsibility": "ERM数据管理、数据管理系统运维",
+        "phone": "7-981-282-4609",
+        "email": "cuironghua@cc7.cn",
+        "keywords": ["ERM", "数据管理", "工程系统", "数据"]
+    },
+    {
+        "id": 12,
+        "name": "韩云峰",
+        "project": "G项目",
+        "responsibility": "ERM采购支持、招标管理、报价管理、供应商门户",
+        "phone": "8-981-723-2674",
+        "email": "hanyunfeng@cc7.cn",
+        "keywords": ["ERM", "采购", "招标", "报价", "供应商", "供应商门户"]
+    },
+    {
+        "id": 13,
+        "name": "林博",
+        "project": "专业人员",
+        "responsibility": "印点点系统运维、打印权限管理",
+        "phone": "7-981-282-4387",
+        "email": "linbo@cc7.cn",
+        "keywords": ["印点点", "打印权限", "打印", "印控"]
+    },
+    {
+        "id": 14,
+        "name": "罗圣喆",
+        "project": "专业人员",
+        "responsibility": "印点点系统运维、打印权限管理",
+        "phone": "7-981-282-4500",
+        "email": "luoshengzhe@cc7.cn",
+        "keywords": ["印点点", "打印权限", "打印", "印控"]
+    },
+    {
+        "id": 15,
+        "name": "李文健",
+        "project": "专业人员",
+        "responsibility": "焊接机器人运维、设备维护",
+        "phone": "7-981-282-4610",
+        "email": "liwenjian@cc7.cn",
+        "keywords": ["焊接机器人", "设备", "机器人"]
+    },
+    {
+        "id": 16,
+        "name": "赵伟",
+        "project": "新增人员",
+        "responsibility": "IT支持",
+        "phone": "7-981-149-5006",
+        "email": "zhaowei2@cc7.cn",
+        "keywords": ["IT", "支持"]
+    },
+    {
+        "id": 17,
+        "name": "毛耀华",
+        "project": "新增人员",
+        "responsibility": "IT支持",
+        "phone": "8-911-941-9042",
+        "email": "maoyaohua@cc7.cn",
+        "keywords": ["IT", "支持"]
+    },
+    {
+        "id": 18,
+        "name": "肖力",
+        "project": "C项目",
+        "responsibility": "C项目全面IT工作（网络、监控、ISP、基站、营区）",
+        "phone": "",
+        "email": "",
+        "keywords": ["C项目", "网络", "监控", "ISP", "基站", "营区"]
+    },
+    {
+        "id": 19,
+        "name": "邱远飞",
+        "project": "分公司",
+        "responsibility": "分公司IT设备和系统（OA、PU、ERM、门禁、监控）",
+        "phone": "",
+        "email": "",
+        "keywords": ["分公司", "OA", "PU", "ERM", "门禁", "监控"]
+    },
+    {
+        "id": 20,
+        "name": "石精一",
+        "project": "分公司",
+        "responsibility": "分公司系统运维（账号管理、通讯、ISP）",
+        "phone": "",
+        "email": "",
+        "keywords": ["分公司", "账号", "通讯", "ISP"]
+    },
+    {
+        "id": 21,
+        "name": "马建文",
+        "project": "M项目",
+        "responsibility": "M项目全面IT工作（ISP、CCTV、闸机、打卡机）",
+        "phone": "",
+        "email": "",
+        "keywords": ["M项目", "ISP", "CCTV", "闸机", "打卡机"]
+    },
+    {
+        "id": 22,
+        "name": "IT服务台",
+        "project": "综合",
+        "responsibility": "IT综合服务、问题受理",
+        "phone": "",
+        "email": "",
+        "keywords": ["IT", "服务台", "综合", "问题", "咨询", "其他"]
+    }
+]

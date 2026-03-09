@@ -1,0 +1,44 @@
+# 钉钉配置
+DINGTALK_AGENT_ID = "36623024"
+DINGTALK_MINI_APP_ID = ""
+DINGTALK_APP_KEY = "dingzuqxgrxfhp81nm4i"
+DINGTALK_APP_SECRET = "zj-pT_vr5-sgMXIQAuefPQYqyka_1mz4MU7vb9VopEzdSTL2TQEncq62LkAZtvif"
+DINGTALK_WEBHOOK_URL = "https://oapi.dingtalk.com/robot/send?access_token=0dfaac8157f7fd5b98c68d4c3a696e451d2700ae1d6c29d9ae6fbca8eeb1ac28"
+NATAPP_PUBLIC_URL = "http://your-app.railway.app"
+
+# Flask服务配置
+FLASK_HOST = "0.0.0.0"
+FLASK_PORT = 8080
+FLASK_DEBUG = False
+
+# 千问模型配置（GitHub部署时禁用）
+QWEN_MODEL_PATH = "models/Qwen1.5-1.8B-Chat"
+QWEN_MODEL_QUANTIZED = False
+QWEN_MAX_NEW_TOKENS = 512
+QWEN_TEMPERATURE = 0.7
+
+# FAQ匹配配置
+FAQ_MATCH_THRESHOLD = 0.3
+FAQ_DATA_PATH = "data/faq.json"
+
+# 人员推荐配置
+PERSONNEL_DATA_PATH = "data/personnel.json"
+PERSONNEL_MATCH_THRESHOLD = 0.8
+
+# 上下文管理配置
+CONTEXT_MAX_ROUNDS = 5
+CONTEXT_EXPIRE_MINUTES = 30
+CONTEXT_STORAGE_PATH = "data/context"
+
+# 联网搜索配置
+SEARCH_ENABLED = True
+SEARCH_RESULT_COUNT = 3
+
+# 日志配置
+LOG_PATH = "logs"
+LOG_LEVEL = "INFO"
+LOG_MAX_SIZE = 10 * 1024 * 1024
+LOG_BACKUP_COUNT = 5
+
+# 自检配置
+HEALTH_CHECK_INTERVAL = 3600

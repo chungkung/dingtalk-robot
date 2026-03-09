@@ -1,6 +1,6 @@
-flask>=2.3.0
-werkzeug>=2.3.0
-requests>=2.31.0
-jieba>=0.42.1
-duckduckgo-search>=8.0.0
-lxml>=5.0.0
+flask>=2.0.0
+werkzeug>=2.0.0
+requests>=2.25.0
+jieba>=0.42.0
+duckduckgo-search>=4.0.0
+lxml>=4.9.0

@@ -161,10 +161,31 @@ class DingTalkClient:
     def verify_callback(self, encrypt: str, signature: str, timestamp: str, nonce: str) -> str:
         try:
             decrypted = self.crypto.decrypt(encrypt)
-            return decrypted
+            if not decrypted:
+                return ""
+            
+            import json
+            data = json.loads(decrypted)
+            challenge = data.get("challenge", "")
+            
+            return challenge
         except Exception as e:
             print(f"Error verifying callback: {e}")
             return ""
+
+    def check_signature(self, encrypt: str, signature: str, timestamp: str, nonce: str) -> bool:
+        try:
+            string_to_sign = f"{timestamp}\n{nonce}\n{encrypt}\n"
+            hmac_code = hmac.new(
+                self.crypto.token.encode('utf-8'),
+                string_to_sign.encode('utf-8'),
+                digestmod=hashlib.sha256
+            ).digest()
+            expected_signature = base64.b64encode(hmac_code).decode('utf-8')
+            return expected_signature == signature
+        except Exception as e:
+            print(f"Error checking signature: {e}")
+            return False
 
     def parse_webhook_event(self, request_data: dict) -> Optional[Dict]:
         try:

@@ -271,5 +271,33 @@
         "question": "WPS下载安装",
         "answer": "WPS下载：\n\n【个人版】\nhttps://www.wps.cn/\n\n【企业版】\nhttps://alidocs.dingtalk.com/i/nodes/OG9lyrgJPXlKNbyzfX1zeZlrJzN67Mw4\n\n【企业版激活码】\n694BF-YUDBG-EAR69-BPRGB-ATQXH\n\n公司已对企业版用户购买会员，需要激活的同事请使用以上激活码进行激活。",
         "keywords": ["WPS", "WPS安装", "WPS下载", "WPS安装包", "WPS打不开", "WPS激活"]
+    },
+    {
+        "id": 40,
+        "category": "账号管理",
+        "question": "7MS账号找谁开通",
+        "answer": "7MS账号开通：\n请联系罗文豪或叶沿廷办理。\n\n7MS账号同时也是Inode VPN、CC7邮箱、钉钉、ERM账号密码。\n\n负责人：罗文豪、叶沿廷\n电话：8-981-198-5837 / 8-981-722-6117",
+        "keywords": ["7ms", "7MS", "开通7ms", "申请7ms", "7ms账号找谁", "我要开通7ms"]
+    },
+    {
+        "id": 41,
+        "category": "网盘相关",
+        "question": "合同部门网盘权限申请",
+        "answer": "合同部门网盘权限申请：\n需经过合同部门领导批准才可以开通。\n\n如还有其他疑问请咨询罗文豪（休假期间请联系林博）。\n\n负责人：罗文豪\n电话：8-981-198-5837",
+        "keywords": ["合同部门权限", "合同部权限", "开通合同部门网盘", "合同部门网盘申请", "增加合同部权限", "我要开合同部门权限"]
+    },
+    {
+        "id": 42,
+        "category": "网络故障",
+        "question": "网线问题找谁",
+        "answer": "网线问题请联系毛耀华。\n\n负责人：毛耀华\n电话：8-911-xxx-xxxx",
+        "keywords": ["网线", "网线问题", "网线坏了", "网线故障"]
+    },
+    {
+        "id": 43,
+        "category": "网络故障",
+        "question": "网络断开/没网络/网络慢",
+        "answer": "网络问题请联系张海彬处理。\n\n负责人：张海彬\n电话：8-911-150-9677\n邮箱：zhanghaibin@cc7.cn",
+        "keywords": ["网络断开", "没网络", "网络慢了", "网络很慢", "网络故障", "网络不好", "网速慢", "断网"]
     }
 ]

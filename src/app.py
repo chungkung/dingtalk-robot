@@ -205,8 +205,19 @@ def dingtalk_webhook():
         
         if "encrypt" in data:
             encrypt = data.get("encrypt", "")
-            logger.info(f"Encrypted message detected, decrypting...")
-            event = dingtalk_client.parse_encrypted_event(encrypt) if dingtalk_client else None
+            msg_signature = request.args.get('msg_signature', '')
+            timestamp = request.args.get('timestamp', '')
+            nonce = request.args.get('nonce', '')
+            
+            logger.info(f"Encrypted message detected, decrypting... sig={msg_signature[:20]}...")
+            
+            if dingtalk_client:
+                is_valid = dingtalk_client.check_signature(encrypt, msg_signature, timestamp, nonce)
+                logger.info(f"POST Signature valid: {is_valid}")
+                
+                event = dingtalk_client.parse_encrypted_event(encrypt)
+            else:
+                event = None
         else:
             event = dingtalk_client.parse_webhook_event(data) if dingtalk_client else None
         

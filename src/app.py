@@ -216,6 +216,9 @@ def dingtalk_webhook():
                 logger.info(f"POST Signature valid: {is_valid}")
                 
                 event = dingtalk_client.parse_encrypted_event(encrypt)
+                
+                if not event:
+                    logger.warning(f"Decryption failed even with valid signature")
             else:
                 event = None
         else:

@@ -260,7 +260,7 @@ class DingTalkClient:
             timestamp_for_sign = timestamp
             nonce_for_sign = nonce
             
-            string_to_sign = f"{timestamp_for_sign}\n{nonce_for_sign}\n"
+            string_to_sign = f"{timestamp_for_sign}\n{nonce_for_sign}\n{encrypt}\n"
             hmac_code = hmac.new(
                 self.crypto.token.encode('utf-8'),
                 string_to_sign.encode('utf-8'),
@@ -278,7 +278,7 @@ class DingTalkClient:
             traceback.print_exc()
             return False
 
-    def get_challenge_for_verify(self, timestamp: str, nonce: str) -> str:
+    def get_challenge_for_verify(self, timestamp: str, nonce: str, encrypt: str = "") -> str:
         try:
             from Crypto.Cipher import AES
         except ImportError:

@@ -3,7 +3,7 @@ import sys
 import json
 import time
 import logging
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from werkzeug.serving import make_server
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -148,6 +148,11 @@ def process_question(question: str, user_id: str = "default") -> str:
             return "抱歉，我现在无法回答您的问题。请稍后再试或联系IT服务台。"
     
     return "抱歉，我无法回答您的问题。请联系IT服务台获取帮助。"
+
+
+@app.route('/')
+def index():
+    return send_from_directory('../templates', 'index.html')
 
 
 @app.route('/health', methods=['GET'])

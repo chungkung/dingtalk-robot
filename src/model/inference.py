@@ -6,7 +6,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 import config.config as cfg
 
 # 是否启用AI模型（GitHub部署时设为False）
-AI_MODEL_ENABLED = os.path.exists(cfg.QWEN_MODEL_PATH)
+AI_MODEL_ENABLED = False  # 禁用AI模型，使用纯FAQ模式
 
 
 class QwenInference:

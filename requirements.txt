@@ -5,3 +5,5 @@ jieba>=0.42.0
 duckduckgo-search>=4.0.0
 lxml>=4.9.0
 pycryptodome>=3.0.0
+dingtalk-stream>=0.0.1
+aiohttp>=3.0.0

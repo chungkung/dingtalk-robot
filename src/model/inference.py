@@ -1,5 +1,6 @@
 import os
 import time
+from typing import Optional, List, Dict
 
 # 是否启用AI模型（设为False使用纯FAQ模式）
 AI_MODEL_ENABLED = False

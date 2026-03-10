@@ -3,8 +3,39 @@ import hmac
 import base64
 import time
 import json
+import struct
 from typing import Optional, Dict
 import config.config as cfg
+
+
+class DingTalkCrypto:
+    def __init__(self, token: str = None, aes_key: str = None):
+        self.token = token or getattr(cfg, 'DINGTALK_CALLBACK_TOKEN', '')
+        self.aes_key = aes_key or getattr(cfg, 'DINGTALK_CALLBACK_AES_KEY', '')
+        
+    def decrypt(self, encrypt: str) -> str:
+        try:
+            from Crypto.Cipher import AES
+        except ImportError:
+            try:
+                from Cryptodome.Cipher import AES
+            except ImportError:
+                return ""
+        
+        try:
+            aes_key = base64.b64decode(self.aes_key + "=")
+            cipher = AES.new(aes_key, AES.MODE_CBC, aes_key[:16])
+            decrypted = cipher.decrypt(base64.b64decode(encrypt))
+            pkcs7_padding = decrypted[-1]
+            content = decrypted[:-pkcs7_padding]
+            
+            msg_len = struct.unpack("I", content[:4])[0]
+            message = content[4:4+msg_len].decode('utf-8')
+            
+            return message
+        except Exception as e:
+            print(f"Decrypt error: {e}")
+            return ""
 
 
 class DingTalkSigner:
@@ -33,6 +64,7 @@ class DingTalkClient:
         self.mini_app_id = cfg.DINGTALK_MINI_APP_ID
         self.webhook_url = getattr(cfg, 'DINGTALK_WEBHOOK_URL', None)
         self.signer = DingTalkSigner()
+        self.crypto = DingTalkCrypto()
         self._access_token = None
         self._token_expire_time = 0
 
@@ -114,6 +146,26 @@ class DingTalkClient:
             print(f"Error sending webhook message: {e}")
             return False
 
+    def parse_encrypted_event(self, encrypt: str) -> Optional[Dict]:
+        try:
+            decrypted = self.crypto.decrypt(encrypt)
+            if not decrypted:
+                return None
+            
+            data = json.loads(decrypted)
+            return self.parse_webhook_event(data)
+        except Exception as e:
+            print(f"Error parsing encrypted event: {e}")
+            return None
+
+    def verify_callback(self, encrypt: str, signature: str, timestamp: str, nonce: str) -> str:
+        try:
+            decrypted = self.crypto.decrypt(encrypt)
+            return decrypted
+        except Exception as e:
+            print(f"Error verifying callback: {e}")
+            return ""
+
     def parse_webhook_event(self, request_data: dict) -> Optional[Dict]:
         try:
             event_type = request_data.get("eventType")
@@ -140,6 +192,18 @@ class DingTalkClient:
                     "content": content,
                     "sender": sender_id,
                     "timestamp": request_data.get("timestamp", int(time.time() * 1000))
+                }
+
+            if request_data.get("msgtype") == "text":
+                msg = request_data.get("text", {})
+                content = msg.get("content", "")
+                sender = request_data.get("senderNick") or request_data.get("userId") or "Unknown"
+                
+                return {
+                    "type": "text",
+                    "content": content,
+                    "sender": sender,
+                    "timestamp": request_data.get("createAt", int(time.time() * 1000))
                 }
             
             if "text" in request_data:

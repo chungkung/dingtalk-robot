@@ -170,6 +170,16 @@ def health_check():
 @app.route('/dingtalk/webhook', methods=['GET', 'POST'])
 def dingtalk_webhook():
     if request.method == 'GET':
+        signature = request.args.get('signature', '')
+        timestamp = request.args.get('timestamp', '')
+        nonce = request.args.get('nonce', '')
+        encrypt = request.args.get('encrypt', '')
+        
+        if encrypt and dingtalk_client:
+            decrypted = dingtalk_client.verify_callback(encrypt, signature, timestamp, nonce)
+            logger.info(f"Callback verification: decrypted={decrypted}")
+            return jsonify({"code": 0, "message": "ok", "msg": decrypted})
+        
         return jsonify({"code": 0, "message": "ok"})
     
     try:
@@ -179,7 +189,12 @@ def dingtalk_webhook():
         if not data:
             return jsonify({"code": -1, "message": "No data"})
         
-        event = dingtalk_client.parse_webhook_event(data) if dingtalk_client else None
+        if "encrypt" in data:
+            encrypt = data.get("encrypt", "")
+            logger.info(f"Encrypted message detected, decrypting...")
+            event = dingtalk_client.parse_encrypted_event(encrypt) if dingtalk_client else None
+        else:
+            event = dingtalk_client.parse_webhook_event(data) if dingtalk_client else None
         
         if not event:
             logger.warning(f"Could not parse webhook event: {data}")

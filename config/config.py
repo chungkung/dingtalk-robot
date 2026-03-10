@@ -6,6 +6,10 @@ DINGTALK_APP_SECRET = "zj-pT_vr5-sgMXIQAuefPQYqyka_1mz4MU7vb9VopEzdSTL2TQEncq62L
 DINGTALK_WEBHOOK_URL = "https://oapi.dingtalk.com/robot/send?access_token=0dfaac8157f7fd5b98c68d4c3a696e451d2700ae1d6c29d9ae6fbca8eeb1ac28"
 NATAPP_PUBLIC_URL = "http://8.137.51.239"
 
+# 钉钉加密回调配置
+DINGTALK_CALLBACK_TOKEN = "uxVglpcpvR7IdkxUNnXldknVyVi2RzYFPcRabC"
+DINGTALK_CALLBACK_AES_KEY = "Texf54l3hi1KYDU1Q2UI33kYjx6okKzifrpDasmVCmK"
+
 # Flask服务配置
 FLASK_HOST = "0.0.0.0"
 FLASK_PORT = 80

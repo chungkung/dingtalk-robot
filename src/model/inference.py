@@ -1,12 +1,19 @@
 import os
 import time
-import torch
-from typing import Optional, List, Dict
-from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
-import config.config as cfg
 
-# 是否启用AI模型（GitHub部署时设为False）
-AI_MODEL_ENABLED = False  # 禁用AI模型，使用纯FAQ模式
+# 是否启用AI模型（设为False使用纯FAQ模式）
+AI_MODEL_ENABLED = False
+
+if AI_MODEL_ENABLED:
+    import torch
+    from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
+else:
+    torch = None
+    AutoTokenizer = None
+    AutoModelForCausalLM = None
+    GenerationConfig = None
+
+import config.config as cfg
 
 
 class QwenInference:

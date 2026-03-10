@@ -2,7 +2,13 @@ import json
 import time
 from typing import List, Dict, Optional
 import config.config as cfg
-from duckduckgo_search import DDGS
+
+try:
+    from duckduckgo_search import DDGS
+    DDGS_AVAILABLE = True
+except ImportError:
+    DDGS = None
+    DDGS_AVAILABLE = False
 
 
 class SearchResult:
@@ -39,6 +45,14 @@ class WebSearcher:
 
     def _do_search(self, query: str) -> List[SearchResult]:
         results = []
+
+        if not DDGS_AVAILABLE:
+            results.append(SearchResult(
+                title=f"搜索结果: {query}",
+                url="",
+                content="联网搜索功能暂不可用"
+            ))
+            return results
 
         try:
             with DDGS() as ddgs:

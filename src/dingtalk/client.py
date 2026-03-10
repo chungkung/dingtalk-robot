@@ -216,9 +216,22 @@ class DingTalkClient:
                 digestmod=hashlib.sha256
             ).digest()
             expected_signature = base64.b64encode(hmac_code).decode('utf-8')
+            
+            print(f"=== Signature Check ===")
+            print(f"Token: {self.crypto.token}")
+            print(f"Timestamp: {timestamp}")
+            print(f"Nonce: {nonce}")
+            print(f"Encrypt: {encrypt[:30]}...")
+            print(f"String to sign: {repr(string_to_sign)}")
+            print(f"Expected sig: {expected_signature}")
+            print(f"Got sig: {signature}")
+            print(f"Match: {expected_signature == signature}")
+            
             return expected_signature == signature
         except Exception as e:
             print(f"Error checking signature: {e}")
+            import traceback
+            traceback.print_exc()
             return False
 
     def get_signature_for_response(self, timestamp: str, nonce: str, encrypt: str) -> str:

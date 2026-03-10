@@ -182,9 +182,18 @@ def dingtalk_webhook():
             logger.info(f"Signature valid: {is_valid}")
             
             if is_valid:
-                decrypted = dingtalk_client.verify_callback(encrypt, signature, timestamp, nonce)
-                logger.info(f"Callback verification success, challenge={decrypted}")
-                return jsonify({"code": 0, "message": "ok", "msg": decrypted})
+                encrypted_response = dingtalk_client.verify_callback(encrypt, signature, timestamp, nonce)
+                logger.info(f"Callback verification success")
+                
+                response_signature = dingtalk_client.get_signature_for_response(timestamp, nonce, encrypted_response)
+                
+                return jsonify({
+                    "code": 0, 
+                    "message": "ok", 
+                    "msg": encrypted_response,
+                    "signature": response_signature,
+                    "time": timestamp
+                })
             else:
                 logger.warning(f"Signature verification failed")
                 return jsonify({"code": -1, "message": "signature error"})

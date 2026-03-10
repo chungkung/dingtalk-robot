@@ -12,6 +12,7 @@ class DingTalkCrypto:
     def __init__(self, token: str = None, aes_key: str = None):
         self.token = token or getattr(cfg, 'DINGTALK_CALLBACK_TOKEN', '')
         self.aes_key = aes_key or getattr(cfg, 'DINGTALK_CALLBACK_AES_KEY', '')
+        self.app_key = cfg.DINGTALK_APP_KEY
         
     def decrypt(self, encrypt: str) -> str:
         try:
@@ -35,6 +36,31 @@ class DingTalkCrypto:
             return message
         except Exception as e:
             print(f"Decrypt error: {e}")
+            return ""
+    
+    def encrypt(self, text: str) -> str:
+        try:
+            from Crypto.Cipher import AES
+        except ImportError:
+            try:
+                from Cryptodome.Cipher import AES
+            except ImportError:
+                return ""
+        
+        try:
+            random_str = "1234567890abcdef"
+            content = random_str.encode('utf-8') + struct.pack("I", len(text)) + text.encode('utf-8') + self.app_key.encode('utf-8')
+            
+            pad_len = 32 - (len(content) % 32)
+            content += bytes([pad_len] * pad_len)
+            
+            aes_key = base64.b64decode(self.aes_key + "=")
+            cipher = AES.new(aes_key, AES.MODE_CBC, aes_key[:16])
+            encrypted = cipher.encrypt(content)
+            
+            return base64.b64encode(encrypted).decode('utf-8')
+        except Exception as e:
+            print(f"Encrypt error: {e}")
             return ""
 
 
@@ -168,7 +194,8 @@ class DingTalkClient:
             data = json.loads(decrypted)
             challenge = data.get("challenge", "")
             
-            return challenge
+            encrypted_response = self.crypto.encrypt(challenge)
+            return encrypted_response
         except Exception as e:
             print(f"Error verifying callback: {e}")
             return ""
@@ -186,6 +213,19 @@ class DingTalkClient:
         except Exception as e:
             print(f"Error checking signature: {e}")
             return False
+
+    def get_signature_for_response(self, timestamp: str, nonce: str, encrypt: str) -> str:
+        try:
+            string_to_sign = f"{timestamp}\n{nonce}\n{encrypt}\n"
+            hmac_code = hmac.new(
+                self.crypto.token.encode('utf-8'),
+                string_to_sign.encode('utf-8'),
+                digestmod=hashlib.sha256
+            ).digest()
+            return base64.b64encode(hmac_code).decode('utf-8')
+        except Exception as e:
+            print(f"Error generating signature: {e}")
+            return ""
 
     def parse_webhook_event(self, request_data: dict) -> Optional[Dict]:
         try:

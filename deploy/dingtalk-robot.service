@@ -1,0 +1,15 @@
+[Unit]
+Description=DingTalk FAQ Robot Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/dingtalk-robot
+ExecStart=/usr/bin/python3 /opt/dingtalk-robot/src/app.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/opt/dingtalk-robot/logs/app.log
+StandardError=append:/opt/dingtalk-robot/logs/app.log
+
+[Install]
+WantedBy=multi-user.target

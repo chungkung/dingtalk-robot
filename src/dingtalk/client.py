@@ -27,15 +27,22 @@ class DingTalkCrypto:
             aes_key = base64.b64decode(self.aes_key + "=")
             cipher = AES.new(aes_key, AES.MODE_CBC, aes_key[:16])
             decrypted = cipher.decrypt(base64.b64decode(encrypt))
-            pkcs7_padding = decrypted[-1]
-            content = decrypted[:-pkcs7_padding]
+            
+            pad = decrypted[-1]
+            if pad > 32:
+                pad = 0
+            
+            content = decrypted[:-pad]
             
             msg_len = struct.unpack("I", content[:4])[0]
-            message = content[4:4+msg_len].decode('utf-8')
+            msg_content = content[4:4+msg_len]
+            message = msg_content.decode('utf-8')
             
             return message
         except Exception as e:
             print(f"Decrypt error: {e}")
+            import traceback
+            traceback.print_exc()
             return ""
     
     def encrypt(self, text: str) -> str:
@@ -225,6 +232,67 @@ class DingTalkClient:
             return base64.b64encode(hmac_code).decode('utf-8')
         except Exception as e:
             print(f"Error generating signature: {e}")
+            return ""
+
+    def check_signature_for_verify(self, signature: str, timestamp: str, nonce: str) -> bool:
+        try:
+            from Crypto.Cipher import AES
+        except ImportError:
+            try:
+                from Cryptodome.Cipher import AES
+            except ImportError:
+                return False
+        
+        try:
+            timestamp_for_sign = timestamp
+            nonce_for_sign = nonce
+            
+            string_to_sign = f"{timestamp_for_sign}\n{nonce_for_sign}\n"
+            hmac_code = hmac.new(
+                self.crypto.token.encode('utf-8'),
+                string_to_sign.encode('utf-8'),
+                digestmod=hashlib.sha256
+            ).digest()
+            expected_signature = base64.b64encode(hmac_code).decode('utf-8')
+            
+            print(f"Expected signature: {expected_signature}")
+            print(f"Got signature: {signature}")
+            
+            return expected_signature == signature
+        except Exception as e:
+            print(f"Error checking signature for verify: {e}")
+            import traceback
+            traceback.print_exc()
+            return False
+
+    def get_challenge_for_verify(self, timestamp: str, nonce: str) -> str:
+        try:
+            from Crypto.Cipher import AES
+        except ImportError:
+            try:
+                from Cryptodome.Cipher import AES
+            except ImportError:
+                return ""
+        
+        try:
+            import os
+            random_str = os.urandom(16).hex()[:16]
+            challenge = random_str
+            
+            content = random_str.encode('utf-8') + struct.pack("I", len(challenge)) + challenge.encode('utf-8') + self.crypto.app_key.encode('utf-8')
+            
+            pad_len = 32 - (len(content) % 32)
+            content += bytes([pad_len] * pad_len)
+            
+            aes_key = base64.b64decode(self.crypto.aes_key + "=")
+            cipher = AES.new(aes_key, AES.MODE_CBC, aes_key[:16])
+            encrypted = cipher.encrypt(content)
+            
+            return base64.b64encode(encrypted).decode('utf-8')
+        except Exception as e:
+            print(f"Error generating challenge: {e}")
+            import traceback
+            traceback.print_exc()
             return ""
 
     def parse_webhook_event(self, request_data: dict) -> Optional[Dict]:
